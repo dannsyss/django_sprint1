@@ -45,9 +45,11 @@ posts = [
     },
 ]
 
+
 def index(request):
     # Переход на главную страницу с выводом всех публикаций
     return render(request, 'blog/index.html', {'posts': posts})
+
 
 def post_detail(request, id):
     # Поиск публикации по id
@@ -56,6 +58,8 @@ def post_detail(request, id):
         raise Http404("Публикация не найдена")
     return render(request, 'blog/detail.html', {'post': post})
 
+
 def category_posts(request, category_slug):
     # Вывод категории
-    return render(request, 'blog/category.html', {'category_slug': category_slug})
+    return render(request, 'blog/category.html',
+                  {'category_slug': category_slug})
