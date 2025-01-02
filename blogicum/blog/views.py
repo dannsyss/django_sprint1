@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from .models import Post
 from django.http import Http404
+from django.shortcuts import render
 
 # Временные данные для публикаций
 posts = [
@@ -60,12 +59,3 @@ def post_detail(request, id):
 def category_posts(request, category_slug):
     # Вывод категории
     return render(request, 'blog/category.html', {'category_slug': category_slug})
-
-# pages/views.py
-from django.shortcuts import render
-
-def about(request):
-    return render(request, 'pages/about.html')
-
-def rules(request):
-    return render(request, 'pages/rules.html')
