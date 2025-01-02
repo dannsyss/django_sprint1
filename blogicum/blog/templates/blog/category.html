@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html> 
 <html lang="ru"> 
   <head>    
@@ -7,24 +8,24 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Публикации в категории personal</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <title>Публикации в категории {{ category_slug }}</title>
   </head>
-  <body>	   
+  <body>
     <header>
       <nav class="navbar navbar-light" style="background-color: lightskyblue">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="{% static 'blog/img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
             Блогикум
-          </a>        
+          </a>
           <ul class="nav  nav-pills">
             <li class="nav-item">
               <a class="nav-link" href="index.html">
                 Лента записей
               </a>
             </li>
-            <li class="nav-item">              
+            <li class="nav-item">
               <a class="nav-link" href="about.html">
                 О проекте
               </a>
@@ -34,13 +35,13 @@
                 Наши правила
               </a>
             </li>
-          </ul>      
+          </ul>
         </div>
-      </nav> 
+      </nav>
     </header>
     <main>
       <div class="container py-5">
-        <h1>Публикации в категории personal</h1>   
+        <h1>Публикации в категории {{ category_slug }}</h1>
       </div>
     </main>
     <footer class="border-top text-center py-3">
